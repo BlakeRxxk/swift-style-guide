@@ -10,7 +10,7 @@ let package = Package(
         .plugin(name: "FormatSwift", targets: ["FormatSwift"]),
     ],
     dependencies: [
-        .package(url: "https://github.com/apple/swift-argument-parser", from: "1.2.2"),
+        .package(url: "https://github.com/apple/swift-argument-parser", from: "1.2.3"),
     ],
     targets: [
         .plugin(
