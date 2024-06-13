@@ -10,4 +10,4 @@ defaults write com.apple.dt.Xcode DVTTextEditorTrimWhitespaceOnlyLines -bool YES
 defaults write com.apple.dt.Xcode DVTTextIndentTabWidth -int 4
 defaults write com.apple.dt.Xcode DVTTextIndentWidth -int 4
 
-defaults write com.apple.dt.Xcode DVTTextPageGuideLocation -int 130
+defaults write com.apple.dt.Xcode DVTTextPageGuideLocation -int 170
