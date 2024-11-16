@@ -38,12 +38,14 @@ let package = Package(
                     .process("swiftlint.yml"),
                 ]),
         
-            .binaryTarget(name: "swiftformat",
-                          url: "https://github.com/calda/SwiftFormat/releases/download/0.55-beta-17/SwiftFormat.artifactbundle.zip",
-                          checksum: "659bdcccc69a6e5ccbd273f0fb7b7af9655d5fa7acc17c4fb3deba6a7b1e9a5b"),
+            .binaryTarget(
+                name: "SwiftFormat",
+                url: "https://github.com/calda/SwiftFormat/releases/download/0.55-beta-17/SwiftFormat.artifactbundle.zip",
+                checksum: "659bdcccc69a6e5ccbd273f0fb7b7af9655d5fa7acc17c4fb3deba6a7b1e9a5b"),
         
-            .binaryTarget(name: "SwiftLintBinary",
-                          url: "https://github.com/realm/SwiftLint/releases/download/0.55.1/SwiftLintBinary-macos.artifactbundle.zip",
-                          checksum: "722a705de1cf4e0e07f2b7d2f9f631f3a8b2635a0c84cce99f9677b38aa4a1d6"),
+            .binaryTarget(
+                name: "SwiftLintBinary",
+                url: "https://github.com/realm/SwiftLint/releases/download/0.55.1/SwiftLintBinary-macos.artifactbundle.zip",
+                checksum: "722a705de1cf4e0e07f2b7d2f9f631f3a8b2635a0c84cce99f9677b38aa4a1d6"),
     ]
 )
