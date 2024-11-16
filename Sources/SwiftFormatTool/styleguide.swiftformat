@@ -2,7 +2,8 @@
 --exclude Carthage,Pods,.build
 
 # options
---swiftversion 5.10
+--swiftversion 6.0
+--languagemode 5
 --self remove # redundantSelf
 --importgrouping testable-bottom # sortedImports
 --commas always # trailingCommas
@@ -27,18 +28,23 @@
 --structthreshold 20 # organizeDeclarations
 --enumthreshold 20 # organizeDeclarations
 --organizetypes class,struct,enum,extension,actor # organizeDeclarations
+--visibilityorder beforeMarks,instanceLifecycle,open,public,package,internal,fileprivate,private # organizeDeclarations
+--typeorder nestedType,staticProperty,staticPropertyWithBody,classPropertyWithBody,swiftUIPropertyWrapper,instanceProperty,instancePropertyWithBody,staticMethod,classMethod,instanceMethod # organizeDeclarations
+--sortswiftuiprops first-appearance-sort #organizeDeclarations
 --extensionacl on-declarations # extensionAccessControl
 --patternlet inline # hoistPatternLet
---redundanttype inferred # redundantType
+--redundanttype inferred # redundantType, propertyType
 --typeblanklines preserve # blankLinesAtStartOfScope, blankLinesAtEndOfScope
 --emptybraces spaced # emptyBraces
+--ranges preserve # spaceAroundOperators
+--operatorfunc no-space # spaceAroundOperators
 --someAny disabled # opaqueGenericParameters
---elseposition same-line #elseOnSameLine
---guardelse next-line #elseOnSameLine
---onelineforeach convert #preferForLoop
---shortoptionals always #typeSugar
---semicolons never #semicolons
---doccomments preserve #docComments
+--elseposition same-line # elseOnSameLine
+--guardelse next-line # elseOnSameLine
+--onelineforeach convert # preferForLoop
+--shortoptionals always # typeSugar
+--semicolons never # semicolons
+--doccomments preserve # docComments
 
 # We recommend a max width of 100 but _strictly enforce_ a max width of 170
 --maxwidth 170 # wrap
@@ -47,8 +53,10 @@
 --rules anyObjectProtocol
 --rules blankLinesBetweenScopes
 --rules consecutiveSpaces
+--rules consecutiveBlankLines
 --rules duplicateImports
 --rules extensionAccessControl
+--rules environmentEntry
 --rules hoistPatternLet
 --rules indent
 --rules markTypes
@@ -61,11 +69,13 @@
 --rules redundantGet
 --rules redundantFileprivate
 --rules redundantRawValues
+--rules redundantEquatable
 --rules sortImports
 --rules sortDeclarations
 --rules strongifiedSelf
 --rules trailingCommas
 --rules trailingSpace
+--rules linebreakAtEndOfFile
 --rules typeSugar
 --rules wrap
 --rules wrapMultilineStatementBraces
@@ -84,9 +94,11 @@
 --rules spaceAroundBraces
 --rules spaceInsideParens
 --rules spaceAroundParens
+--rules spaceAroundOperators
 --rules enumNamespaces
 --rules blockComments
 --rules docComments
+--rules docCommentsBeforeAttributes
 --rules spaceAroundComments
 --rules spaceInsideComments
 --rules blankLinesAtStartOfScope
@@ -101,6 +113,11 @@
 --rules preferForLoop
 --rules conditionalAssignment
 --rules wrapMultilineConditionalAssignment
---rules blankLineAfterMultilineSwitchCase
---rules consistentSwitchStatementSpacing
+--rules void
+--rules blankLineAfterSwitchCase
+--rules consistentSwitchCaseSpacing
 --rules semicolons
+--rules propertyType
+--rules blankLinesBetweenChainedFunctions
+--rules unusedPrivateDeclaration
+--rules emptyExtension

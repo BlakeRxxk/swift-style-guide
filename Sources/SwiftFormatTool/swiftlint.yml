@@ -1,17 +1,11 @@
 only_rules:
-  - colon
   - fatal_error_message
   - implicitly_unwrapped_optional
   - legacy_cggeometry_functions
   - legacy_constant
   - legacy_constructor
   - legacy_nsgeometry_functions
-  - operator_usage_whitespace
-  - return_arrow_whitespace
-  - trailing_newline
   - unused_optional_binding
-  - vertical_whitespace
-  - void_return
   - unowned_variable_capture
   - custom_rules
 
@@ -19,9 +13,6 @@ excluded:
   - Carthage
   - Pods
   - .build
-
-colon:
-  apply_to_dictionaries: false
 
 indentation: 4
 reporter: "emoji"
@@ -59,5 +50,5 @@ custom_rules:
     match_kinds:
     - attribute.builtin
     - typeidentifier
-    message: "Instead of using `@unchecked Sendable`, consider a safe alternative like a standard `Sendable` conformance or using `@preconcurrency import`. If you really must use `@unchecked Sendable`, you can add a `// swiftlint:disable:next no_unchecked_sendable` annotation with an explanation for how we know the type is thread-safe, and why we have to use @unchecked Sendable instead of Sendable. More explanation and suggested safe alternatives are available at https://github.com/airbnb/swift#unchecked-sendable."
+    message: "Instead of using `@unchecked Sendable`, consider a safe alternative like a standard `Sendable` conformance or using `@preconcurrency import`. If you really must use `@unchecked Sendable`, you can add a `// swiftlint:disable:next no_unchecked_sendable` annotation with an explanation for how we know the type is thread-safe, and why we have to use @unchecked Sendable instead of Sendable."
     severity: error
